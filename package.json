@@ -24,24 +24,24 @@
   ],
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "watson-developer-cloud": "^3.10.0",
-    "watson-speech": "^0.35.1"
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "watson-developer-cloud": "^3.18.0",
+    "watson-speech": "^0.35.4"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.3.1",
+    "@fortawesome/fontawesome-free": "^5.7.1",
     "babel-eslint": "^8.2.6",
     "casperjs": "^1.1.4",
-    "codecov": "^3.0.4",
-    "eslint": "^5.1.0",
-    "jest": "^23.4.1",
+    "codecov": "^3.1.0",
+    "eslint": "^5.13.0",
+    "jest": "^23.6.0",
     "phantomjs-prebuilt": "^2.1.16",
-    "supertest": "^3.1.0"
+    "supertest": "^3.4.2"
   }
 }

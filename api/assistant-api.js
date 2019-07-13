@@ -21,7 +21,7 @@ const AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sd
 // Create the service wrapper
 var assistant = new AssistantV1({
   version: '2018-07-10',
-  iam_apikey: process.env.ASSISTANT_IAM_APIKEY
+  iam_apikey: process.env.ASSISTANT_APIKEY
 });
 
 // Endpoint to be call from the client side

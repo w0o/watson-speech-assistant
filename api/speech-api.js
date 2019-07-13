@@ -29,9 +29,7 @@ const TextToSpeechV1 = require('watson-developer-cloud/text-to-speech/v1');
 var sttAuthService = new AuthorizationV1(
   Object.assign(
     {
-      username: process.env.SPEECH_TO_TEXT_USERNAME, // or hard-code credentials here
-      password: process.env.SPEECH_TO_TEXT_PASSWORD
-      // iam_apikey: process.env.SPEECH_TO_TEXT_APIKEY
+      iam_apikey: process.env.SPEECH_TO_TEXT_APIKEY
     },
     vcapServices.getCredentials('speech_to_text') // pulls credentials from environment in bluemix, otherwise returns {}
   )
@@ -56,9 +54,7 @@ const getSTTToken = function (req, res) {
 var ttsAuthService = new AuthorizationV1(
   Object.assign(
     {
-      username: process.env.TEXT_TO_SPEECH_USERNAME, // or hard-code credentials here
-      password: process.env.TEXT_TO_SPEECH_PASSWORD
-      // iam_apikey: process.env.TEXT_TO_SPEECH_APIKEY
+      iam_apikey: process.env.TEXT_TO_SPEECH_APIKEY
     },
     vcapServices.getCredentials('text_to_speech') // pulls credentials from environment in bluemix, otherwise returns {}
   )

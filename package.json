@@ -1,7 +1,7 @@
 {
-  "name": "@ibm-watson/assistant-simple",
-  "description": "A simple Node.js based web app which shows how to use the Watson Assistant API to recognize user intents.",
-  "version": "0.1.1",
+  "name": "@w0o/watson-speech-assistant",
+  "description": "A simple web app which demonstrates the speech assistant code pattern. Based on the work from https://github.com/watson-developer-cloud/assistant-simple.git",
+  "version": "0.1.0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,11 +11,12 @@
     "test-unit": "jest test/unit --coverage",
     "lint": "eslint .",
     "autofix": "eslint --fix .",
-    "codecov": "npm run test && (codecov || true)"
+    "codecov": "npm run test && (codecov || true)",
+    "postinstall": "mkdir -p public/js && cp -r node_modules/watson-speech/dist/watson-speech*.* \"$_\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/watson-developer-cloud/assistant-simple.git"
+    "url": "https://github.com/w0o/watson-speech-assistant.git"
   },
   "license": "Apache-2.0",
   "cacheDirectories": [
@@ -23,24 +24,24 @@
     "static/bower_components"
   ],
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "watson-developer-cloud": "^3.18.0",
-    "watson-speech": "^0.35.4"
+    "express": "^4.17.1",
+    "watson-developer-cloud": "^3.18.4",
+    "watson-speech": "^0.35.12"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.1",
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "babel-eslint": "^8.2.6",
     "casperjs": "^1.1.4",
-    "codecov": "^3.1.0",
-    "eslint": "^5.13.0",
-    "jest": "^23.6.0",
+    "codecov": "^3.5.0",
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
     "phantomjs-prebuilt": "^2.1.16",
     "supertest": "^3.4.2"
   }

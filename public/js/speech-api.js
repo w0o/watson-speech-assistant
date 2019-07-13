@@ -29,7 +29,7 @@ var SpeechApi = (function () {
 
   function startRecording(token) {
     state.stream = WatsonSpeech.SpeechToText.recognizeMicrophone({
-      token: token,
+      access_token: token,
       objectMode: true,
       format: false
     });
@@ -56,7 +56,7 @@ var SpeechApi = (function () {
   function onTTSTokenReceived(token, inputText, autoPlay) {
     var audioResult = WatsonSpeech.TextToSpeech.synthesize({
       text: inputText,
-      token: token,
+      access_token: token,
       autoPlay: autoPlay,
       preload: true
     });

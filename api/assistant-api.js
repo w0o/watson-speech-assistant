@@ -20,12 +20,13 @@ const AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sd
 
 // Create the service wrapper
 var assistant = new AssistantV1({
-  version: '2018-07-10'
+  version: '2018-07-10',
+  iam_apikey: process.env.ASSISTANT_IAM_APIKEY
 });
 
 // Endpoint to be call from the client side
 const processMessage = function (req, res) {
-  var workspace = process.env.WORKSPACE_ID || '<workspace-id>';
+  var workspace = process.env.ASSISTANT_WORKSPACE_ID || '<workspace-id>';
   if (!workspace || workspace === '<workspace-id>') {
     return res.json({
       'output': {
